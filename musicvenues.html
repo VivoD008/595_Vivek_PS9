@@ -1,0 +1,2309 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_165267ef13cda21932dd57dc111976fd {
+                    position: relative;
+                    width: 900.0px;
+                    height: 500.0px;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@main/folium/templates/leaflet_heat.min.js"></script>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_165267ef13cda21932dd57dc111976fd" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_165267ef13cda21932dd57dc111976fd = L.map(
+                "map_165267ef13cda21932dd57dc111976fd",
+                {
+                    center: [40.287564, -102.083884],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 4,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_86c72d234e23f4ac7d44b9fb8ce061fe = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 20, "maxZoom": 20, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abcd", "tms": false}
+            );
+        
+    
+            tile_layer_86c72d234e23f4ac7d44b9fb8ce061fe.addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            var tile_layer_7cee32ae9318fdf0df5833178ff7b7dd = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 20, "maxZoom": 20, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abcd", "tms": false}
+            );
+        
+    
+            tile_layer_7cee32ae9318fdf0df5833178ff7b7dd.addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            var marker_4fe00eaf6169753a55462d2e3db7e199 = L.marker(
+                [42.350294474675, -71.06482068592],
+                {}
+            ).addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            var icon_bd3178288e68708b2f7a236484c58c6c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_4fe00eaf6169753a55462d2e3db7e199.setIcon(icon_bd3178288e68708b2f7a236484c58c6c);
+        
+    
+        var popup_1180a7acac4cfb6127b32623e257df2c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_56a6c2bc9c4c9bd5943d38713bdb553e = $(`<div id="html_56a6c2bc9c4c9bd5943d38713bdb553e" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Wang Theatre<br><b>Address:</b> 270 Tremont Street, Boston, Ma, 02116, Usa, 100</div>`)[0];
+                popup_1180a7acac4cfb6127b32623e257df2c.setContent(html_56a6c2bc9c4c9bd5943d38713bdb553e);
+            
+        
+
+        marker_4fe00eaf6169753a55462d2e3db7e199.bindPopup(popup_1180a7acac4cfb6127b32623e257df2c)
+        ;
+
+        
+    
+    
+            marker_4fe00eaf6169753a55462d2e3db7e199.bindTooltip(
+                `<div>
+                     Wang Theatre
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c298bb8db790fec50dd830f2d8c0e223 = L.marker(
+                [39.940392998951, -75.129911040482],
+                {}
+            ).addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            var icon_c30507d33265e5470e1249273686d1c1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_c298bb8db790fec50dd830f2d8c0e223.setIcon(icon_c30507d33265e5470e1249273686d1c1);
+        
+    
+        var popup_179626d9a464c1c3f226b30142491092 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7b79b9dafc03337f340eac28d25daca5 = $(`<div id="html_7b79b9dafc03337f340eac28d25daca5" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Susquehanna Bank Center<br><b>Address:</b> 1 Harbour Blvd, Camden, Nj, 08103, Usa, 100</div>`)[0];
+                popup_179626d9a464c1c3f226b30142491092.setContent(html_7b79b9dafc03337f340eac28d25daca5);
+            
+        
+
+        marker_c298bb8db790fec50dd830f2d8c0e223.bindPopup(popup_179626d9a464c1c3f226b30142491092)
+        ;
+
+        
+    
+    
+            marker_c298bb8db790fec50dd830f2d8c0e223.bindTooltip(
+                `<div>
+                     Susquehanna Bank Center
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2457c303d8d20737cfe2dd17c52ce369 = L.marker(
+                [37.778072994099, -122.417326989778],
+                {}
+            ).addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            var icon_4d67b973e11fbd71e3581b4f40f5b971 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_2457c303d8d20737cfe2dd17c52ce369.setIcon(icon_4d67b973e11fbd71e3581b4f40f5b971);
+        
+    
+        var popup_3cc52c26a59758fcb5efd62aef43fe33 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7141eeab3476ee2e072629914dc6504a = $(`<div id="html_7141eeab3476ee2e072629914dc6504a" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Bill Graham Civic Auditorium<br><b>Address:</b> 99 Grove St, San Francisco, Ca, 94102, Usa, 100</div>`)[0];
+                popup_3cc52c26a59758fcb5efd62aef43fe33.setContent(html_7141eeab3476ee2e072629914dc6504a);
+            
+        
+
+        marker_2457c303d8d20737cfe2dd17c52ce369.bindPopup(popup_3cc52c26a59758fcb5efd62aef43fe33)
+        ;
+
+        
+    
+    
+            marker_2457c303d8d20737cfe2dd17c52ce369.bindTooltip(
+                `<div>
+                     Bill Graham Civic Auditorium
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5487bb3a0d60056e7645d5e7f1891793 = L.marker(
+                [36.114292999783, -115.195379972083],
+                {}
+            ).addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            var icon_0d480ea59d81450326ff1ae7b0e3aaa2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_5487bb3a0d60056e7645d5e7f1891793.setIcon(icon_0d480ea59d81450326ff1ae7b0e3aaa2);
+        
+    
+        var popup_55afd0a438f1f7ac23f713b21bd47ac1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_39717b6aeba10fd259d970f580aabd1d = $(`<div id="html_39717b6aeba10fd259d970f580aabd1d" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Pearl Theater<br><b>Address:</b> 4321 W Flamingo Rd, Las Vegas, Nv, 89103, Usa, 100</div>`)[0];
+                popup_55afd0a438f1f7ac23f713b21bd47ac1.setContent(html_39717b6aeba10fd259d970f580aabd1d);
+            
+        
+
+        marker_5487bb3a0d60056e7645d5e7f1891793.bindPopup(popup_55afd0a438f1f7ac23f713b21bd47ac1)
+        ;
+
+        
+    
+    
+            marker_5487bb3a0d60056e7645d5e7f1891793.bindTooltip(
+                `<div>
+                     Pearl Theater
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9c0729f60129d63f364ac0f5d94aa816 = L.marker(
+                [32.75574599521, -117.213592975034],
+                {}
+            ).addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            var icon_970a1fea5b723ce94434aaee4ef3ecbd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_9c0729f60129d63f364ac0f5d94aa816.setIcon(icon_970a1fea5b723ce94434aaee4ef3ecbd);
+        
+    
+        var popup_4cd580accad0ae342b0cf7cc5f9b64d1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e23dd5817f6deafbb0475aca81b52d03 = $(`<div id="html_e23dd5817f6deafbb0475aca81b52d03" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Pechanga Arena<br><b>Address:</b> 3500 Sports Arena Blvd, San Diego, Ca, 92110, Usa, 100</div>`)[0];
+                popup_4cd580accad0ae342b0cf7cc5f9b64d1.setContent(html_e23dd5817f6deafbb0475aca81b52d03);
+            
+        
+
+        marker_9c0729f60129d63f364ac0f5d94aa816.bindPopup(popup_4cd580accad0ae342b0cf7cc5f9b64d1)
+        ;
+
+        
+    
+    
+            marker_9c0729f60129d63f364ac0f5d94aa816.bindTooltip(
+                `<div>
+                     Pechanga Arena
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_639e6bf2a75296e78f4e7402e1b7546a = L.marker(
+                [34.044385992011, -118.266985974399],
+                {}
+            ).addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            var icon_099216d7d353bde836a117445d623979 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_639e6bf2a75296e78f4e7402e1b7546a.setIcon(icon_099216d7d353bde836a117445d623979);
+        
+    
+        var popup_96bca6b296448da5c9747b19f81036a5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_626a6ba3b1adb749b2148e96300cbb67 = $(`<div id="html_626a6ba3b1adb749b2148e96300cbb67" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Nokia Theatre<br><b>Address:</b> 777 Chick Hearn Ct, Los Angeles, Ca, 90015, Usa, 100</div>`)[0];
+                popup_96bca6b296448da5c9747b19f81036a5.setContent(html_626a6ba3b1adb749b2148e96300cbb67);
+            
+        
+
+        marker_639e6bf2a75296e78f4e7402e1b7546a.bindPopup(popup_96bca6b296448da5c9747b19f81036a5)
+        ;
+
+        
+    
+    
+            marker_639e6bf2a75296e78f4e7402e1b7546a.bindTooltip(
+                `<div>
+                     Nokia Theatre
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6e8d072117535bb6f4f240eeb2798308 = L.marker(
+                [30.030146003715, -90.050519029633],
+                {}
+            ).addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            var icon_c58e762114c3062a1c6fa163385e1e9b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_6e8d072117535bb6f4f240eeb2798308.setIcon(icon_c58e762114c3062a1c6fa163385e1e9b);
+        
+    
+        var popup_0b95f92f0b9b8cb3974c0fa8b7ef2796 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_59f4fd7de05e5378f1beb10dd031ffcc = $(`<div id="html_59f4fd7de05e5378f1beb10dd031ffcc" style="width: 100.0%; height: 100.0%;"><b>Name:</b> UNO Lakefront Arena<br><b>Address:</b> 6801 Franklin Ave, New Orleans, La, 70122, Usa, 100</div>`)[0];
+                popup_0b95f92f0b9b8cb3974c0fa8b7ef2796.setContent(html_59f4fd7de05e5378f1beb10dd031ffcc);
+            
+        
+
+        marker_6e8d072117535bb6f4f240eeb2798308.bindPopup(popup_0b95f92f0b9b8cb3974c0fa8b7ef2796)
+        ;
+
+        
+    
+    
+            marker_6e8d072117535bb6f4f240eeb2798308.bindTooltip(
+                `<div>
+                     UNO Lakefront Arena
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e306fa066eb9cad266484b084e6492ce = L.marker(
+                [33.772612001641, -84.38557003829],
+                {}
+            ).addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            var icon_785fa6f3efe30a20088e61a684c90ccd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_e306fa066eb9cad266484b084e6492ce.setIcon(icon_785fa6f3efe30a20088e61a684c90ccd);
+        
+    
+        var popup_0f55de04862684e0b654b601853e1919 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ef41694cfd0bb48e08d26cb63ec0680e = $(`<div id="html_ef41694cfd0bb48e08d26cb63ec0680e" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Fox Theatre<br><b>Address:</b> 660 Peachtree St Ne, Atlanta, Ga, 30308, Usa, 100</div>`)[0];
+                popup_0f55de04862684e0b654b601853e1919.setContent(html_ef41694cfd0bb48e08d26cb63ec0680e);
+            
+        
+
+        marker_e306fa066eb9cad266484b084e6492ce.bindPopup(popup_0f55de04862684e0b654b601853e1919)
+        ;
+
+        
+    
+    
+            marker_e306fa066eb9cad266484b084e6492ce.bindTooltip(
+                `<div>
+                     Fox Theatre
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a0be70ee3a38c43e1555bc5634704c9c = L.marker(
+                [25.787643993174, -80.189931038856],
+                {}
+            ).addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            var icon_833c77ce5e0c9226b860b9e6b2fa8cdb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_a0be70ee3a38c43e1555bc5634704c9c.setIcon(icon_833c77ce5e0c9226b860b9e6b2fa8cdb);
+        
+    
+        var popup_9c1515e0e98ff8580b75ffef440a83dd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d4adc40fb1a7f043ae2330e749cffe55 = $(`<div id="html_d4adc40fb1a7f043ae2330e749cffe55" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Knight Concert Hall<br><b>Address:</b> 1300 Biscayne Blvd, Miami, Fl, 33132, Usa, 100</div>`)[0];
+                popup_9c1515e0e98ff8580b75ffef440a83dd.setContent(html_d4adc40fb1a7f043ae2330e749cffe55);
+            
+        
+
+        marker_a0be70ee3a38c43e1555bc5634704c9c.bindPopup(popup_9c1515e0e98ff8580b75ffef440a83dd)
+        ;
+
+        
+    
+    
+            marker_a0be70ee3a38c43e1555bc5634704c9c.bindTooltip(
+                `<div>
+                     Knight Concert Hall
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4deba99a9fcb828f3fdb4f1072b75611 = L.marker(
+                [25.818194982511, -80.122087998373],
+                {}
+            ).addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            var icon_3008ce455e7e9fbdedb1770b25a6ca44 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_4deba99a9fcb828f3fdb4f1072b75611.setIcon(icon_3008ce455e7e9fbdedb1770b25a6ca44);
+        
+    
+        var popup_ea39a48608a55086910af70c118b8405 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c362b0d67c446b5bafb6ca168aa9d86d = $(`<div id="html_c362b0d67c446b5bafb6ca168aa9d86d" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Fontainebleau Miami Beach<br><b>Address:</b> 4441 Collins Ave, Miami Beach, Fl, 33140, Usa, 100</div>`)[0];
+                popup_ea39a48608a55086910af70c118b8405.setContent(html_c362b0d67c446b5bafb6ca168aa9d86d);
+            
+        
+
+        marker_4deba99a9fcb828f3fdb4f1072b75611.bindPopup(popup_ea39a48608a55086910af70c118b8405)
+        ;
+
+        
+    
+    
+            marker_4deba99a9fcb828f3fdb4f1072b75611.bindTooltip(
+                `<div>
+                     Fontainebleau Miami Beach
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9f61afcd0272289129fd2b405c9b2509 = L.marker(
+                [28.607547017097, -81.197173027879],
+                {}
+            ).addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            var icon_e8448b5bf461fddab35eb307c51126d5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_9f61afcd0272289129fd2b405c9b2509.setIcon(icon_e8448b5bf461fddab35eb307c51126d5);
+        
+    
+        var popup_0228b562a3b9432be18380c89ec2aefa = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_226a73490f953a90229e7d052e75f7a4 = $(`<div id="html_226a73490f953a90229e7d052e75f7a4" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Addition Financial Arena<br><b>Address:</b> 12777 Gemini Blvd N, Orlando, Fl, 32816, Usa, 100</div>`)[0];
+                popup_0228b562a3b9432be18380c89ec2aefa.setContent(html_226a73490f953a90229e7d052e75f7a4);
+            
+        
+
+        marker_9f61afcd0272289129fd2b405c9b2509.bindPopup(popup_0228b562a3b9432be18380c89ec2aefa)
+        ;
+
+        
+    
+    
+            marker_9f61afcd0272289129fd2b405c9b2509.bindTooltip(
+                `<div>
+                     Addition Financial Arena
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7eecb3a353c6db0fef10c58c4f9a7406 = L.marker(
+                [38.639008988924, -90.232157972749],
+                {}
+            ).addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            var icon_2187f887e7cb7749248a05932bf3c6a2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_7eecb3a353c6db0fef10c58c4f9a7406.setIcon(icon_2187f887e7cb7749248a05932bf3c6a2);
+        
+    
+        var popup_0bc613286e5d892eb307b9f2a5421395 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4202ac1016bf9ca5f73f95e2feef7871 = $(`<div id="html_4202ac1016bf9ca5f73f95e2feef7871" style="width: 100.0%; height: 100.0%;"><b>Name:</b> The Fabulous Fox<br><b>Address:</b> 527 N Grand Blvd, Saint Louis, Mo, 63103, Usa, 100</div>`)[0];
+                popup_0bc613286e5d892eb307b9f2a5421395.setContent(html_4202ac1016bf9ca5f73f95e2feef7871);
+            
+        
+
+        marker_7eecb3a353c6db0fef10c58c4f9a7406.bindPopup(popup_0bc613286e5d892eb307b9f2a5421395)
+        ;
+
+        
+    
+    
+            marker_7eecb3a353c6db0fef10c58c4f9a7406.bindTooltip(
+                `<div>
+                     The Fabulous Fox
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_85caf5d8a818e93637f68a9b64868523 = L.marker(
+                [41.976239011612, -87.864404017043],
+                {}
+            ).addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            var icon_a3029e81bfd695ed2406ec245165666f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_85caf5d8a818e93637f68a9b64868523.setIcon(icon_a3029e81bfd695ed2406ec245165666f);
+        
+    
+        var popup_843e366ad9415a53571522f9e0f81d8b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_35b6b4d9334d330d19be183a7724bba8 = $(`<div id="html_35b6b4d9334d330d19be183a7724bba8" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Rosemont Theatre<br><b>Address:</b> 5400 N River Rd, Rosemont, Il, 60018, Usa, 100</div>`)[0];
+                popup_843e366ad9415a53571522f9e0f81d8b.setContent(html_35b6b4d9334d330d19be183a7724bba8);
+            
+        
+
+        marker_85caf5d8a818e93637f68a9b64868523.bindPopup(popup_843e366ad9415a53571522f9e0f81d8b)
+        ;
+
+        
+    
+    
+            marker_85caf5d8a818e93637f68a9b64868523.bindTooltip(
+                `<div>
+                     Rosemont Theatre
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_93230cce496e9d9ef1df906f7b7c56ed = L.marker(
+                [40.759946021504, -73.980316075443],
+                {}
+            ).addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            var icon_036e2e583171d356bed59ef1ffc71ea0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_93230cce496e9d9ef1df906f7b7c56ed.setIcon(icon_036e2e583171d356bed59ef1ffc71ea0);
+        
+    
+        var popup_c6842d81a963c544e1c0a70695ea9abc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_84275209b1f534f13b97166f9d205112 = $(`<div id="html_84275209b1f534f13b97166f9d205112" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Radio City Music Hall<br><b>Address:</b> 1260 6Th Ave, New York, Ny, 10020, Usa, 100</div>`)[0];
+                popup_c6842d81a963c544e1c0a70695ea9abc.setContent(html_84275209b1f534f13b97166f9d205112);
+            
+        
+
+        marker_93230cce496e9d9ef1df906f7b7c56ed.bindPopup(popup_c6842d81a963c544e1c0a70695ea9abc)
+        ;
+
+        
+    
+    
+            marker_93230cce496e9d9ef1df906f7b7c56ed.bindTooltip(
+                `<div>
+                     Radio City Music Hall
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7e1c49f92fc0892775e1569c603ca0f3 = L.marker(
+                [40.427940981662, -86.914870006458],
+                {}
+            ).addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            var icon_f1b317e65d07013607c2004dc230a5ec = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_7e1c49f92fc0892775e1569c603ca0f3.setIcon(icon_f1b317e65d07013607c2004dc230a5ec);
+        
+    
+        var popup_196c1af9575f5abd3e41b9688c0c3b0d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e1c92b7eef7e1c20eca5d1e4685d69a1 = $(`<div id="html_e1c92b7eef7e1c20eca5d1e4685d69a1" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Elliott Hall of Music<br><b>Address:</b> 712 3Rd St, West Lafayette, In, 47907, Usa, 100</div>`)[0];
+                popup_196c1af9575f5abd3e41b9688c0c3b0d.setContent(html_e1c92b7eef7e1c20eca5d1e4685d69a1);
+            
+        
+
+        marker_7e1c49f92fc0892775e1569c603ca0f3.bindPopup(popup_196c1af9575f5abd3e41b9688c0c3b0d)
+        ;
+
+        
+    
+    
+            marker_7e1c49f92fc0892775e1569c603ca0f3.bindTooltip(
+                `<div>
+                     Elliott Hall of Music
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8592ad0a3b2d8213a494d6f408662670 = L.marker(
+                [42.366578752346, -71.061709323461],
+                {}
+            ).addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            var icon_ae1138dc026255896d5f441e3bdfbcc7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_8592ad0a3b2d8213a494d6f408662670.setIcon(icon_ae1138dc026255896d5f441e3bdfbcc7);
+        
+    
+        var popup_19fed33497fe99850d8d209d184f4fcf = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8db6033e84cbbfabafecd6d4e7b57072 = $(`<div id="html_8db6033e84cbbfabafecd6d4e7b57072" style="width: 100.0%; height: 100.0%;"><b>Name:</b> TD Garden<br><b>Address:</b> 100 Legends Way, Boston, Ma, 02114, Usa, 100</div>`)[0];
+                popup_19fed33497fe99850d8d209d184f4fcf.setContent(html_8db6033e84cbbfabafecd6d4e7b57072);
+            
+        
+
+        marker_8592ad0a3b2d8213a494d6f408662670.bindPopup(popup_19fed33497fe99850d8d209d184f4fcf)
+        ;
+
+        
+    
+    
+            marker_8592ad0a3b2d8213a494d6f408662670.bindTooltip(
+                `<div>
+                     TD Garden
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9acc3cad63a4396c2f2ac34974ff15b0 = L.marker(
+                [39.354889988599, -74.438404028508],
+                {}
+            ).addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            var icon_fa4fbd2aee969a77c1e143d71eed2e19 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_9acc3cad63a4396c2f2ac34974ff15b0.setIcon(icon_fa4fbd2aee969a77c1e143d71eed2e19);
+        
+    
+        var popup_ffe2ee2678ca0ae6b4896f23ee94ae72 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5c9d31cf8813b154eb24757917f1ca83 = $(`<div id="html_5c9d31cf8813b154eb24757917f1ca83" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Jim Whelan Boardwalk Hall<br><b>Address:</b> 2301 Boardwalk, Atlantic City, Nj, 08401, Usa, 100</div>`)[0];
+                popup_ffe2ee2678ca0ae6b4896f23ee94ae72.setContent(html_5c9d31cf8813b154eb24757917f1ca83);
+            
+        
+
+        marker_9acc3cad63a4396c2f2ac34974ff15b0.bindPopup(popup_ffe2ee2678ca0ae6b4896f23ee94ae72)
+        ;
+
+        
+    
+    
+            marker_9acc3cad63a4396c2f2ac34974ff15b0.bindTooltip(
+                `<div>
+                     Jim Whelan Boardwalk Hall
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8443d2c59c9aa9af6b3a65a45ae50b85 = L.marker(
+                [40.7483136, -73.9940525],
+                {}
+            ).addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            var icon_0366cb9d74bd2b422eac8f0f20bdcc05 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_8443d2c59c9aa9af6b3a65a45ae50b85.setIcon(icon_0366cb9d74bd2b422eac8f0f20bdcc05);
+        
+    
+        var popup_f3cebc2a03fb884a6cc9519fc21c03e8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c8b2a60bd9049dbb94c899214e24c898 = $(`<div id="html_c8b2a60bd9049dbb94c899214e24c898" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Madison Square Garden<br><b>Address:</b> 10001, New York, Ny, Usa, 100</div>`)[0];
+                popup_f3cebc2a03fb884a6cc9519fc21c03e8.setContent(html_c8b2a60bd9049dbb94c899214e24c898);
+            
+        
+
+        marker_8443d2c59c9aa9af6b3a65a45ae50b85.bindPopup(popup_f3cebc2a03fb884a6cc9519fc21c03e8)
+        ;
+
+        
+    
+    
+            marker_8443d2c59c9aa9af6b3a65a45ae50b85.bindTooltip(
+                `<div>
+                     Madison Square Garden
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b2146e3c04dd4149111702c8d0587b29 = L.marker(
+                [41.581639000951, -81.563521959616],
+                {}
+            ).addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            var icon_7e1ffa9df3f65c0be1b69eec0b96f671 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_b2146e3c04dd4149111702c8d0587b29.setIcon(icon_7e1ffa9df3f65c0be1b69eec0b96f671);
+        
+    
+        var popup_d18522c5882a78ffd56a873975451c23 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8676d0e05814d8affa1d9d9f28121c94 = $(`<div id="html_8676d0e05814d8affa1d9d9f28121c94" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Rocket Mortgage FieldHouse<br><b>Address:</b> 1 Center St, Cleveland, Oh, 44110, Usa, 90.76</div>`)[0];
+                popup_d18522c5882a78ffd56a873975451c23.setContent(html_8676d0e05814d8affa1d9d9f28121c94);
+            
+        
+
+        marker_b2146e3c04dd4149111702c8d0587b29.bindPopup(popup_d18522c5882a78ffd56a873975451c23)
+        ;
+
+        
+    
+    
+            marker_b2146e3c04dd4149111702c8d0587b29.bindTooltip(
+                `<div>
+                     Rocket Mortgage FieldHouse
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c08adeda4a85e2cd4ed1491dc408df0f = L.marker(
+                [39.764075013699, -86.15548801895],
+                {}
+            ).addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            var icon_11d34fa9a509e8cdd490ee175509a11e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_c08adeda4a85e2cd4ed1491dc408df0f.setIcon(icon_11d34fa9a509e8cdd490ee175509a11e);
+        
+    
+        var popup_5cb61c081accc92dcd73507121143a62 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_81ab1e3dc03478a632201c311596636a = $(`<div id="html_81ab1e3dc03478a632201c311596636a" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Gainbridge Fieldhouse<br><b>Address:</b> 125 S Pennsylvania St, Indianapolis, In, 46204, Usa, 100</div>`)[0];
+                popup_5cb61c081accc92dcd73507121143a62.setContent(html_81ab1e3dc03478a632201c311596636a);
+            
+        
+
+        marker_c08adeda4a85e2cd4ed1491dc408df0f.bindPopup(popup_5cb61c081accc92dcd73507121143a62)
+        ;
+
+        
+    
+    
+            marker_c08adeda4a85e2cd4ed1491dc408df0f.bindTooltip(
+                `<div>
+                     Gainbridge Fieldhouse
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_774458c828ddb90250c26fde2807171a = L.marker(
+                [38.626472008706, -90.202634981928],
+                {}
+            ).addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            var icon_2159830f5617cec339c54c91fa200078 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_774458c828ddb90250c26fde2807171a.setIcon(icon_2159830f5617cec339c54c91fa200078);
+        
+    
+        var popup_27d4a7a10cc7baedda2993f2af1e8d86 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cfff682afb599c690a0ff64891ebea95 = $(`<div id="html_cfff682afb599c690a0ff64891ebea95" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Enterprise Center<br><b>Address:</b> 1401 Clark Ave, Saint Louis, Mo, 63103, Usa, 100</div>`)[0];
+                popup_27d4a7a10cc7baedda2993f2af1e8d86.setContent(html_cfff682afb599c690a0ff64891ebea95);
+            
+        
+
+        marker_774458c828ddb90250c26fde2807171a.bindPopup(popup_27d4a7a10cc7baedda2993f2af1e8d86)
+        ;
+
+        
+    
+    
+            marker_774458c828ddb90250c26fde2807171a.bindTooltip(
+                `<div>
+                     Enterprise Center
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_53f472fa0acb7a89d44a5853abc45d0b = L.marker(
+                [35.463463992562, -97.515108984669],
+                {}
+            ).addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            var icon_57e24998bcadd45f3fe53dce663f67e5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_53f472fa0acb7a89d44a5853abc45d0b.setIcon(icon_57e24998bcadd45f3fe53dce663f67e5);
+        
+    
+        var popup_d64fcd0267501992d56670598817bad6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_787939baec91af2181c84aa4f282ceb6 = $(`<div id="html_787939baec91af2181c84aa4f282ceb6" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Paycom Center<br><b>Address:</b> 100 W Reno Ave, Oklahoma City, Ok, 73102, Usa, 100</div>`)[0];
+                popup_d64fcd0267501992d56670598817bad6.setContent(html_787939baec91af2181c84aa4f282ceb6);
+            
+        
+
+        marker_53f472fa0acb7a89d44a5853abc45d0b.bindPopup(popup_d64fcd0267501992d56670598817bad6)
+        ;
+
+        
+    
+    
+            marker_53f472fa0acb7a89d44a5853abc45d0b.bindTooltip(
+                `<div>
+                     Paycom Center
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_59c919a4da1ee544807a41bfb0ad5730 = L.marker(
+                [32.790478003579, -96.810307016974],
+                {}
+            ).addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            var icon_d09c89ebc1c3a3a23129b84d69e4eadf = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_59c919a4da1ee544807a41bfb0ad5730.setIcon(icon_d09c89ebc1c3a3a23129b84d69e4eadf);
+        
+    
+        var popup_ec22e2b069c70d945e26f21b56e84804 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_823d20dad372551e59951352dd71e21e = $(`<div id="html_823d20dad372551e59951352dd71e21e" style="width: 100.0%; height: 100.0%;"><b>Name:</b> American Airlines Center<br><b>Address:</b> 2500 Victory Ave, Dallas, Tx, 75219, Usa, 100</div>`)[0];
+                popup_ec22e2b069c70d945e26f21b56e84804.setContent(html_823d20dad372551e59951352dd71e21e);
+            
+        
+
+        marker_59c919a4da1ee544807a41bfb0ad5730.bindPopup(popup_ec22e2b069c70d945e26f21b56e84804)
+        ;
+
+        
+    
+    
+            marker_59c919a4da1ee544807a41bfb0ad5730.bindTooltip(
+                `<div>
+                     American Airlines Center
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1f6777fc95883fc11da093881d99a3e2 = L.marker(
+                [29.750901264954, -95.362129982264],
+                {}
+            ).addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            var icon_7989da590073eda326a831722012a601 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_1f6777fc95883fc11da093881d99a3e2.setIcon(icon_7989da590073eda326a831722012a601);
+        
+    
+        var popup_a8d5d66b76d61940238281e01f4c0600 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_944166be44f84b4d8ea7809232f290fe = $(`<div id="html_944166be44f84b4d8ea7809232f290fe" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Toyota Center<br><b>Address:</b> 1510 Polk St, Houston, Tx, 77002, Usa, 100</div>`)[0];
+                popup_a8d5d66b76d61940238281e01f4c0600.setContent(html_944166be44f84b4d8ea7809232f290fe);
+            
+        
+
+        marker_1f6777fc95883fc11da093881d99a3e2.bindPopup(popup_a8d5d66b76d61940238281e01f4c0600)
+        ;
+
+        
+    
+    
+            marker_1f6777fc95883fc11da093881d99a3e2.bindTooltip(
+                `<div>
+                     Toyota Center
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ee723e2fd1b00b1108c07820fbdec87a = L.marker(
+                [39.748693005996, -105.007573964543],
+                {}
+            ).addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            var icon_f218991dff814d2b0b05393a672b0481 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_ee723e2fd1b00b1108c07820fbdec87a.setIcon(icon_f218991dff814d2b0b05393a672b0481);
+        
+    
+        var popup_04b9a25fbc7cc2e67556e2cd46831f3b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3a703ee6c1bb839b2c1e58189d75eea8 = $(`<div id="html_3a703ee6c1bb839b2c1e58189d75eea8" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Ball Arena<br><b>Address:</b> 1000 Chopper Cir, Denver, Co, 80204, Usa, 100</div>`)[0];
+                popup_04b9a25fbc7cc2e67556e2cd46831f3b.setContent(html_3a703ee6c1bb839b2c1e58189d75eea8);
+            
+        
+
+        marker_ee723e2fd1b00b1108c07820fbdec87a.bindPopup(popup_04b9a25fbc7cc2e67556e2cd46831f3b)
+        ;
+
+        
+    
+    
+            marker_ee723e2fd1b00b1108c07820fbdec87a.bindTooltip(
+                `<div>
+                     Ball Arena
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d4e2848ff03743307d2dee5f3b172f65 = L.marker(
+                [33.446403417479, -112.071910440955],
+                {}
+            ).addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            var icon_40448ab1d7c7a1d0c2adb3e5bf38327e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_d4e2848ff03743307d2dee5f3b172f65.setIcon(icon_40448ab1d7c7a1d0c2adb3e5bf38327e);
+        
+    
+        var popup_a886df2478f7e56a72364c0bed003b65 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9cb75ac91c2bf593483dfb6f4ab05806 = $(`<div id="html_9cb75ac91c2bf593483dfb6f4ab05806" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Footprint Center<br><b>Address:</b> 201 East Jefferson Street, Phoenix, Az, 85004, Usa, 100</div>`)[0];
+                popup_a886df2478f7e56a72364c0bed003b65.setContent(html_9cb75ac91c2bf593483dfb6f4ab05806);
+            
+        
+
+        marker_d4e2848ff03743307d2dee5f3b172f65.bindPopup(popup_a886df2478f7e56a72364c0bed003b65)
+        ;
+
+        
+    
+    
+            marker_d4e2848ff03743307d2dee5f3b172f65.bindTooltip(
+                `<div>
+                     Footprint Center
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a8e7a65d201d9af36e90f59324d1b4bf = L.marker(
+                [39.097372986887, -94.580016021887],
+                {}
+            ).addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            var icon_bb26709d5eaefa86123547700529037f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_a8e7a65d201d9af36e90f59324d1b4bf.setIcon(icon_bb26709d5eaefa86123547700529037f);
+        
+    
+        var popup_e2513601fd0099ac9c484e25cc2c8c9a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f2cb238a803844b9a6611295fe022b0a = $(`<div id="html_f2cb238a803844b9a6611295fe022b0a" style="width: 100.0%; height: 100.0%;"><b>Name:</b> T-Mobile Center<br><b>Address:</b> 1407 Grand Blvd, Kansas City, Mo, 64106, Usa, 100</div>`)[0];
+                popup_e2513601fd0099ac9c484e25cc2c8c9a.setContent(html_f2cb238a803844b9a6611295fe022b0a);
+            
+        
+
+        marker_a8e7a65d201d9af36e90f59324d1b4bf.bindPopup(popup_e2513601fd0099ac9c484e25cc2c8c9a)
+        ;
+
+        
+    
+    
+            marker_a8e7a65d201d9af36e90f59324d1b4bf.bindTooltip(
+                `<div>
+                     T-Mobile Center
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_bcecf7665b5ba7772e4ae1541bdc4e56 = L.marker(
+                [34.043096017113, -118.266998966349],
+                {}
+            ).addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            var icon_b98f3775c99249a567dc6c3a13577b50 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_bcecf7665b5ba7772e4ae1541bdc4e56.setIcon(icon_b98f3775c99249a567dc6c3a13577b50);
+        
+    
+        var popup_d6a4c7a6fa8b9cf242a0851c36b443cc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a2202837459abc9a731afa117bf2b4e7 = $(`<div id="html_a2202837459abc9a731afa117bf2b4e7" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Staples Center<br><b>Address:</b> 1111 S Figueroa St, Los Angeles, Ca, 90015, Usa, 100</div>`)[0];
+                popup_d6a4c7a6fa8b9cf242a0851c36b443cc.setContent(html_a2202837459abc9a731afa117bf2b4e7);
+            
+        
+
+        marker_bcecf7665b5ba7772e4ae1541bdc4e56.bindPopup(popup_d6a4c7a6fa8b9cf242a0851c36b443cc)
+        ;
+
+        
+    
+    
+            marker_bcecf7665b5ba7772e4ae1541bdc4e56.bindTooltip(
+                `<div>
+                     Staples Center
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2c1db97dd2c3770385dab6e27b1f4612 = L.marker(
+                [36.103023991968, -115.169833020852],
+                {}
+            ).addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            var icon_ddadfc88076188b147543d7f6a132bd8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_2c1db97dd2c3770385dab6e27b1f4612.setIcon(icon_ddadfc88076188b147543d7f6a132bd8);
+        
+    
+        var popup_63be34e000278e65bdae0568f39ba7ff = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_19ddc4df1ae437fed56e727483f10879 = $(`<div id="html_19ddc4df1ae437fed56e727483f10879" style="width: 100.0%; height: 100.0%;"><b>Name:</b> MGM Grand Garden Arena<br><b>Address:</b> 3799 Las Vegas Blvd S, Las Vegas, Nv, 89109, Usa, 99.89</div>`)[0];
+                popup_63be34e000278e65bdae0568f39ba7ff.setContent(html_19ddc4df1ae437fed56e727483f10879);
+            
+        
+
+        marker_2c1db97dd2c3770385dab6e27b1f4612.bindPopup(popup_63be34e000278e65bdae0568f39ba7ff)
+        ;
+
+        
+    
+    
+            marker_2c1db97dd2c3770385dab6e27b1f4612.bindTooltip(
+                `<div>
+                     MGM Grand Garden Arena
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b153ba91a2981162317848641267d50e = L.marker(
+                [37.33281498185, -121.900925981766],
+                {}
+            ).addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            var icon_7da0de0bd73fabf47f9ca5f7fd73e14b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_b153ba91a2981162317848641267d50e.setIcon(icon_7da0de0bd73fabf47f9ca5f7fd73e14b);
+        
+    
+        var popup_1a9d1a30e3cf7127f8df7bf8f55b170c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_215be71d577dc4d604ef6206c2f622f6 = $(`<div id="html_215be71d577dc4d604ef6206c2f622f6" style="width: 100.0%; height: 100.0%;"><b>Name:</b> SAP Center<br><b>Address:</b> 525 W Santa Clara St, San Jose, Ca, 95113, Usa, 100</div>`)[0];
+                popup_1a9d1a30e3cf7127f8df7bf8f55b170c.setContent(html_215be71d577dc4d604ef6206c2f622f6);
+            
+        
+
+        marker_b153ba91a2981162317848641267d50e.bindPopup(popup_1a9d1a30e3cf7127f8df7bf8f55b170c)
+        ;
+
+        
+    
+    
+            marker_b153ba91a2981162317848641267d50e.bindTooltip(
+                `<div>
+                     SAP Center
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2a9309b262c1f92112b445af7cb61f89 = L.marker(
+                [47.236819009873, -122.42698000857],
+                {}
+            ).addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            var icon_c2e1495e838031d9f04d65836429ee47 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_2a9309b262c1f92112b445af7cb61f89.setIcon(icon_c2e1495e838031d9f04d65836429ee47);
+        
+    
+        var popup_a33a9a5d6f375019e1efee2c43f612d5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5167d91e3b7b63d334366b9e1224c744 = $(`<div id="html_5167d91e3b7b63d334366b9e1224c744" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Tacoma Dome<br><b>Address:</b> 2727 E D St, Tacoma, Wa, 98421, Usa, 100</div>`)[0];
+                popup_a33a9a5d6f375019e1efee2c43f612d5.setContent(html_5167d91e3b7b63d334366b9e1224c744);
+            
+        
+
+        marker_2a9309b262c1f92112b445af7cb61f89.bindPopup(popup_a33a9a5d6f375019e1efee2c43f612d5)
+        ;
+
+        
+    
+    
+            marker_2a9309b262c1f92112b445af7cb61f89.bindTooltip(
+                `<div>
+                     Tacoma Dome
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f9d62c2118bb08caddd677c24f4f3702 = L.marker(
+                [44.944128559411, -93.101249566815],
+                {}
+            ).addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            var icon_7a72c5298e1c056de915af35a1f5c8e9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_f9d62c2118bb08caddd677c24f4f3702.setIcon(icon_7a72c5298e1c056de915af35a1f5c8e9);
+        
+    
+        var popup_871a39dd28ebd1484e20713eab858b17 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8abc82c0cd82dea1a36e494a1364c827 = $(`<div id="html_8abc82c0cd82dea1a36e494a1364c827" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Xcel Energy Center<br><b>Address:</b> 199 Kellogg Blvd W, Saint Paul, Mn, 55102, Usa, 99.89</div>`)[0];
+                popup_871a39dd28ebd1484e20713eab858b17.setContent(html_8abc82c0cd82dea1a36e494a1364c827);
+            
+        
+
+        marker_f9d62c2118bb08caddd677c24f4f3702.bindPopup(popup_871a39dd28ebd1484e20713eab858b17)
+        ;
+
+        
+    
+    
+            marker_f9d62c2118bb08caddd677c24f4f3702.bindTooltip(
+                `<div>
+                     Xcel Energy Center
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_407278169ee627a41df490321c940d14 = L.marker(
+                [43.043676979394, -87.917776036969],
+                {}
+            ).addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            var icon_892f6cc4de4b6760ca4a35c3f6563150 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_407278169ee627a41df490321c940d14.setIcon(icon_892f6cc4de4b6760ca4a35c3f6563150);
+        
+    
+        var popup_8a485a845b67f306e71b73df6e9ab500 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_132e3df2ce41cbfc4441b1a3bd4fbb51 = $(`<div id="html_132e3df2ce41cbfc4441b1a3bd4fbb51" style="width: 100.0%; height: 100.0%;"><b>Name:</b> BMO Harris Bradley Center<br><b>Address:</b> 1001 N Vel R Phillips Ave, Milwaukee, Wi, 53203, Usa, 100</div>`)[0];
+                popup_8a485a845b67f306e71b73df6e9ab500.setContent(html_132e3df2ce41cbfc4441b1a3bd4fbb51);
+            
+        
+
+        marker_407278169ee627a41df490321c940d14.bindPopup(popup_8a485a845b67f306e71b73df6e9ab500)
+        ;
+
+        
+    
+    
+            marker_407278169ee627a41df490321c940d14.bindTooltip(
+                `<div>
+                     BMO Harris Bradley Center
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_810c03177d3632c8969cb0897fd375d7 = L.marker(
+                [40.43963298222, -79.989253021772],
+                {}
+            ).addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            var icon_e5119f23e8213194ff38a82a82488f37 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_810c03177d3632c8969cb0897fd375d7.setIcon(icon_e5119f23e8213194ff38a82a82488f37);
+        
+    
+        var popup_c5dca7af838312acf229e1746efd0b9f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ae489c4cbc0e3ca161a5541bbdc557ff = $(`<div id="html_ae489c4cbc0e3ca161a5541bbdc557ff" style="width: 100.0%; height: 100.0%;"><b>Name:</b> PPG Paints Arena<br><b>Address:</b> 1001 5Th Ave, Pittsburgh, Pa, 15219, Usa, 100</div>`)[0];
+                popup_c5dca7af838312acf229e1746efd0b9f.setContent(html_ae489c4cbc0e3ca161a5541bbdc557ff);
+            
+        
+
+        marker_810c03177d3632c8969cb0897fd375d7.bindPopup(popup_c5dca7af838312acf229e1746efd0b9f)
+        ;
+
+        
+    
+    
+            marker_810c03177d3632c8969cb0897fd375d7.bindTooltip(
+                `<div>
+                     PPG Paints Arena
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_bb2fa705479eb4ed30cdf43a57221e92 = L.marker(
+                [38.898086281912, -77.020959508149],
+                {}
+            ).addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            var icon_471f8d6a2ebc320d6bf30af88d5855c5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_bb2fa705479eb4ed30cdf43a57221e92.setIcon(icon_471f8d6a2ebc320d6bf30af88d5855c5);
+        
+    
+        var popup_72fa911f7f448321680f403e540b28f1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_50e504706820f7827bb6b36cdcff5dd0 = $(`<div id="html_50e504706820f7827bb6b36cdcff5dd0" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Capital One Arena<br><b>Address:</b> 601 F St Nw, Washington, Dc, 20004, Usa, 100</div>`)[0];
+                popup_72fa911f7f448321680f403e540b28f1.setContent(html_50e504706820f7827bb6b36cdcff5dd0);
+            
+        
+
+        marker_bb2fa705479eb4ed30cdf43a57221e92.bindPopup(popup_72fa911f7f448321680f403e540b28f1)
+        ;
+
+        
+    
+    
+            marker_bb2fa705479eb4ed30cdf43a57221e92.bindTooltip(
+                `<div>
+                     Capital One Arena
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_180e329bef99e080c65fa341711b1435 = L.marker(
+                [38.046411996729, -78.506944039141],
+                {}
+            ).addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            var icon_f8e2236efeaf2a69874fe6d2e282704c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_180e329bef99e080c65fa341711b1435.setIcon(icon_f8e2236efeaf2a69874fe6d2e282704c);
+        
+    
+        var popup_659e2d8d9201803c6428dd368f67bcb4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_838c5d81cb8bd74870cfc53e8eafde66 = $(`<div id="html_838c5d81cb8bd74870cfc53e8eafde66" style="width: 100.0%; height: 100.0%;"><b>Name:</b> John Paul Jones Arena<br><b>Address:</b> 295 Massie Rd, Charlottesville, Va, 22903, Usa, 100</div>`)[0];
+                popup_659e2d8d9201803c6428dd368f67bcb4.setContent(html_838c5d81cb8bd74870cfc53e8eafde66);
+            
+        
+
+        marker_180e329bef99e080c65fa341711b1435.bindPopup(popup_659e2d8d9201803c6428dd368f67bcb4)
+        ;
+
+        
+    
+    
+            marker_180e329bef99e080c65fa341711b1435.bindTooltip(
+                `<div>
+                     John Paul Jones Arena
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_942b685a3d226ea80ac375a6273e42e7 = L.marker(
+                [39.902010001197, -75.171961959066],
+                {}
+            ).addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            var icon_f388b98a51758c9bfe9b9070a25a7a7c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_942b685a3d226ea80ac375a6273e42e7.setIcon(icon_f388b98a51758c9bfe9b9070a25a7a7c);
+        
+    
+        var popup_b41946fe92ef012b560241d9f43ba625 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c39c9dc04517e64c7861a692ea69c2f6 = $(`<div id="html_c39c9dc04517e64c7861a692ea69c2f6" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Wells Fargo Center<br><b>Address:</b> 3601 S Broad St, Philadelphia, Pa, 19148, Usa, 100</div>`)[0];
+                popup_b41946fe92ef012b560241d9f43ba625.setContent(html_c39c9dc04517e64c7861a692ea69c2f6);
+            
+        
+
+        marker_942b685a3d226ea80ac375a6273e42e7.bindPopup(popup_b41946fe92ef012b560241d9f43ba625)
+        ;
+
+        
+    
+    
+            marker_942b685a3d226ea80ac375a6273e42e7.bindTooltip(
+                `<div>
+                     Wells Fargo Center
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ffd2208972109a587d1c059b43fddb37 = L.marker(
+                [41.767912004966, -72.67656603487],
+                {}
+            ).addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            var icon_0dd940065f4d8c9029a9159e8a1af900 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_ffd2208972109a587d1c059b43fddb37.setIcon(icon_0dd940065f4d8c9029a9159e8a1af900);
+        
+    
+        var popup_f7579c777c3f80e2c5b590a8ca12069d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_79f2be0147632aaf172c0039c9c08306 = $(`<div id="html_79f2be0147632aaf172c0039c9c08306" style="width: 100.0%; height: 100.0%;"><b>Name:</b> XL Center<br><b>Address:</b> 1 Civic Center Plz, Hartford, Ct, 06103, Usa, 100</div>`)[0];
+                popup_f7579c777c3f80e2c5b590a8ca12069d.setContent(html_79f2be0147632aaf172c0039c9c08306);
+            
+        
+
+        marker_ffd2208972109a587d1c059b43fddb37.bindPopup(popup_f7579c777c3f80e2c5b590a8ca12069d)
+        ;
+
+        
+    
+    
+            marker_ffd2208972109a587d1c059b43fddb37.bindTooltip(
+                `<div>
+                     XL Center
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2d32de4d4729acff46ff5bced90e43a2 = L.marker(
+                [35.225228637096, -80.839923993144],
+                {}
+            ).addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            var icon_efed7b36ded11551fcf8cb1aa0bec89c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_2d32de4d4729acff46ff5bced90e43a2.setIcon(icon_efed7b36ded11551fcf8cb1aa0bec89c);
+        
+    
+        var popup_0780def63abc99d2a75d907ec1de44e4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7933feb1d006772af7cf723830bb6cac = $(`<div id="html_7933feb1d006772af7cf723830bb6cac" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Spectrum Center<br><b>Address:</b> 333 East Trade Street, Charlotte, Nc, 28202, Usa, 100</div>`)[0];
+                popup_0780def63abc99d2a75d907ec1de44e4.setContent(html_7933feb1d006772af7cf723830bb6cac);
+            
+        
+
+        marker_2d32de4d4729acff46ff5bced90e43a2.bindPopup(popup_0780def63abc99d2a75d907ec1de44e4)
+        ;
+
+        
+    
+    
+            marker_2d32de4d4729acff46ff5bced90e43a2.bindTooltip(
+                `<div>
+                     Spectrum Center
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d987a75fac83a9ee156cbd2995c2ef3e = L.marker(
+                [35.803440774699, -78.721941531972],
+                {}
+            ).addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            var icon_189e79b2c9cab0736d9cf5bb9015bc6d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_d987a75fac83a9ee156cbd2995c2ef3e.setIcon(icon_189e79b2c9cab0736d9cf5bb9015bc6d);
+        
+    
+        var popup_dc95280c91528b4736b27e249272e3fb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c8b76430d16c0201144ee0e1400e74f4 = $(`<div id="html_c8b76430d16c0201144ee0e1400e74f4" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Lenovo Center<br><b>Address:</b> 1400 Edwards Mill Road, Raleigh, Nc, 27607, Usa, 100</div>`)[0];
+                popup_dc95280c91528b4736b27e249272e3fb.setContent(html_c8b76430d16c0201144ee0e1400e74f4);
+            
+        
+
+        marker_d987a75fac83a9ee156cbd2995c2ef3e.bindPopup(popup_dc95280c91528b4736b27e249272e3fb)
+        ;
+
+        
+    
+    
+            marker_d987a75fac83a9ee156cbd2995c2ef3e.bindTooltip(
+                `<div>
+                     Lenovo Center
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d81662993629dd4b2793969ff1dd729f = L.marker(
+                [41.880665995125, -87.674637980608],
+                {}
+            ).addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            var icon_5c7be96337d27fddd4691278ddb59cc1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_d81662993629dd4b2793969ff1dd729f.setIcon(icon_5c7be96337d27fddd4691278ddb59cc1);
+        
+    
+        var popup_ee15fae5d5fbc739b58bb2e2ae619b34 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a177f4757aaa2cd9a9e9ff8e2c9c185c = $(`<div id="html_a177f4757aaa2cd9a9e9ff8e2c9c185c" style="width: 100.0%; height: 100.0%;"><b>Name:</b> United Center<br><b>Address:</b> 1901 W Madison St, Chicago, Il, 60612, Usa, 100</div>`)[0];
+                popup_ee15fae5d5fbc739b58bb2e2ae619b34.setContent(html_a177f4757aaa2cd9a9e9ff8e2c9c185c);
+            
+        
+
+        marker_d81662993629dd4b2793969ff1dd729f.bindPopup(popup_ee15fae5d5fbc739b58bb2e2ae619b34)
+        ;
+
+        
+    
+    
+            marker_d81662993629dd4b2793969ff1dd729f.bindTooltip(
+                `<div>
+                     United Center
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_582a183f8c8aa8a1e8733abbba41f354 = L.marker(
+                [42.962394018174, -85.671528999541],
+                {}
+            ).addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            var icon_28ac366246b319254b69e8b89bfe5e0b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_582a183f8c8aa8a1e8733abbba41f354.setIcon(icon_28ac366246b319254b69e8b89bfe5e0b);
+        
+    
+        var popup_98f27b5c653fe387f92bcd5f739a0162 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_101f12485e34b37d568a90599a7fec19 = $(`<div id="html_101f12485e34b37d568a90599a7fec19" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Van Andel Arena<br><b>Address:</b> 130 Fulton St W, Grand Rapids, Mi, 49503, Usa, 100</div>`)[0];
+                popup_98f27b5c653fe387f92bcd5f739a0162.setContent(html_101f12485e34b37d568a90599a7fec19);
+            
+        
+
+        marker_582a183f8c8aa8a1e8733abbba41f354.bindPopup(popup_98f27b5c653fe387f92bcd5f739a0162)
+        ;
+
+        
+    
+    
+            marker_582a183f8c8aa8a1e8733abbba41f354.bindTooltip(
+                `<div>
+                     Van Andel Arena
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1ea0b4991a92cb1e35fbd4deefec4a54 = L.marker(
+                [42.875030195748, -78.876597452386],
+                {}
+            ).addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            var icon_697cd019d872c86943552b3d3730119e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_1ea0b4991a92cb1e35fbd4deefec4a54.setIcon(icon_697cd019d872c86943552b3d3730119e);
+        
+    
+        var popup_f131de8c2b684d98cefbbe02f5848252 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6ab44aecd342c87284ae8c0e8a9a37cf = $(`<div id="html_6ab44aecd342c87284ae8c0e8a9a37cf" style="width: 100.0%; height: 100.0%;"><b>Name:</b> KeyBank Center<br><b>Address:</b> 1 Seymour H Knox Iii Plz, Buffalo, Ny, 14203, Usa, 100</div>`)[0];
+                popup_f131de8c2b684d98cefbbe02f5848252.setContent(html_6ab44aecd342c87284ae8c0e8a9a37cf);
+            
+        
+
+        marker_1ea0b4991a92cb1e35fbd4deefec4a54.bindPopup(popup_f131de8c2b684d98cefbbe02f5848252)
+        ;
+
+        
+    
+    
+            marker_1ea0b4991a92cb1e35fbd4deefec4a54.bindTooltip(
+                `<div>
+                     KeyBank Center
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d7e599b964317e3ff5668cbf470b8315 = L.marker(
+                [40.007590004246, -83.025133005821],
+                {}
+            ).addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            var icon_e2afb8badd7108abf6dc63e57cbc289e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_d7e599b964317e3ff5668cbf470b8315.setIcon(icon_e2afb8badd7108abf6dc63e57cbc289e);
+        
+    
+        var popup_91f785bf2dfada85ce9e210063b9733a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2d7c1ba9e9f00b474981cd81c3155988 = $(`<div id="html_2d7c1ba9e9f00b474981cd81c3155988" style="width: 100.0%; height: 100.0%;"><b>Name:</b> The Schottenstein Center<br><b>Address:</b> 555 Borror Dr, Columbus, Oh, 43210, Usa, 100</div>`)[0];
+                popup_91f785bf2dfada85ce9e210063b9733a.setContent(html_2d7c1ba9e9f00b474981cd81c3155988);
+            
+        
+
+        marker_d7e599b964317e3ff5668cbf470b8315.bindPopup(popup_91f785bf2dfada85ce9e210063b9733a)
+        ;
+
+        
+    
+    
+            marker_d7e599b964317e3ff5668cbf470b8315.bindTooltip(
+                `<div>
+                     The Schottenstein Center
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_27409cec2b621f6048fa964b5593cf2c = L.marker(
+                [38.257822998919, -85.753833002296],
+                {}
+            ).addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            var icon_177388285a8088fda2d45c6f416ff9d9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_27409cec2b621f6048fa964b5593cf2c.setIcon(icon_177388285a8088fda2d45c6f416ff9d9);
+        
+    
+        var popup_deed2f91d93a35f3103a072a0f7fd57e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3b52363a6de70aa5f95cf6ef6156befe = $(`<div id="html_3b52363a6de70aa5f95cf6ef6156befe" style="width: 100.0%; height: 100.0%;"><b>Name:</b> KFC Yum! Center<br><b>Address:</b> 1 Arena Plz, Louisville, Ky, 40202, Usa, 100</div>`)[0];
+                popup_deed2f91d93a35f3103a072a0f7fd57e.setContent(html_3b52363a6de70aa5f95cf6ef6156befe);
+            
+        
+
+        marker_27409cec2b621f6048fa964b5593cf2c.bindPopup(popup_deed2f91d93a35f3103a072a0f7fd57e)
+        ;
+
+        
+    
+    
+            marker_27409cec2b621f6048fa964b5593cf2c.bindTooltip(
+                `<div>
+                     KFC Yum! Center
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_944d3b3400b9ad00f278506ff6de766e = L.marker(
+                [29.425107022273, -98.434965496193],
+                {}
+            ).addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            var icon_3ef3fbf1692721c338bd7d0608263d91 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_944d3b3400b9ad00f278506ff6de766e.setIcon(icon_3ef3fbf1692721c338bd7d0608263d91);
+        
+    
+        var popup_7c47bb397dc246b8e2f55ab6e9cc94d2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_33bbf79d1663e263b44e06bf533d46cd = $(`<div id="html_33bbf79d1663e263b44e06bf533d46cd" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Frost Bank Center<br><b>Address:</b> 1 Frost Bank Center Dr, San Antonio, Tx, 78219, Usa, 100</div>`)[0];
+                popup_7c47bb397dc246b8e2f55ab6e9cc94d2.setContent(html_33bbf79d1663e263b44e06bf533d46cd);
+            
+        
+
+        marker_944d3b3400b9ad00f278506ff6de766e.bindPopup(popup_7c47bb397dc246b8e2f55ab6e9cc94d2)
+        ;
+
+        
+    
+    
+            marker_944d3b3400b9ad00f278506ff6de766e.bindTooltip(
+                `<div>
+                     Frost Bank Center
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3c46e75e70173af836f830c1d21f7d54 = L.marker(
+                [41.263446994714, -95.928057979759],
+                {}
+            ).addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            var icon_7388a88e77994ce68e1ec8ea37de5634 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_3c46e75e70173af836f830c1d21f7d54.setIcon(icon_7388a88e77994ce68e1ec8ea37de5634);
+        
+    
+        var popup_f06c288b7b40e8d69f1dc7a8f97ef597 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0c38722854f6b4b72f92c854af438555 = $(`<div id="html_0c38722854f6b4b72f92c854af438555" style="width: 100.0%; height: 100.0%;"><b>Name:</b> CHI Health Center<br><b>Address:</b> 455 N 10Th St, Omaha, Ne, 68102, Usa, 100</div>`)[0];
+                popup_f06c288b7b40e8d69f1dc7a8f97ef597.setContent(html_0c38722854f6b4b72f92c854af438555);
+            
+        
+
+        marker_3c46e75e70173af836f830c1d21f7d54.bindPopup(popup_f06c288b7b40e8d69f1dc7a8f97ef597)
+        ;
+
+        
+    
+    
+            marker_3c46e75e70173af836f830c1d21f7d54.bindTooltip(
+                `<div>
+                     CHI Health Center
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_35825854aa1610eafaa5cdd5834c4680 = L.marker(
+                [40.768289333567, -111.90119546461],
+                {}
+            ).addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            var icon_f9b3f06201cc5c221c17453b883910f0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_35825854aa1610eafaa5cdd5834c4680.setIcon(icon_f9b3f06201cc5c221c17453b883910f0);
+        
+    
+        var popup_03b8169b182cb51cdb8191440e0b36b7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_900cfed19603095fa0ef9eaea7389b8c = $(`<div id="html_900cfed19603095fa0ef9eaea7389b8c" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Delta Center<br><b>Address:</b> 301 W South Temple St, Salt Lake City, Ut, 84101, Usa, 98.38</div>`)[0];
+                popup_03b8169b182cb51cdb8191440e0b36b7.setContent(html_900cfed19603095fa0ef9eaea7389b8c);
+            
+        
+
+        marker_35825854aa1610eafaa5cdd5834c4680.bindPopup(popup_03b8169b182cb51cdb8191440e0b36b7)
+        ;
+
+        
+    
+    
+            marker_35825854aa1610eafaa5cdd5834c4680.bindTooltip(
+                `<div>
+                     Delta Center
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_fa96414f8c2c02edb131d2c16635d3de = L.marker(
+                [37.751641981824, -122.205460051934],
+                {}
+            ).addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            var icon_6cdcef3989c6aeaa88f4612d5f9a639d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_fa96414f8c2c02edb131d2c16635d3de.setIcon(icon_6cdcef3989c6aeaa88f4612d5f9a639d);
+        
+    
+        var popup_6a65960d51658af85ad7131de23719e5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7d3a17dedcfe4deb5a18b3bc0f9a8b21 = $(`<div id="html_7d3a17dedcfe4deb5a18b3bc0f9a8b21" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Oakland Arena<br><b>Address:</b> 7000 S Coliseum Way, Oakland, Ca, 94621, Usa, 100</div>`)[0];
+                popup_6a65960d51658af85ad7131de23719e5.setContent(html_7d3a17dedcfe4deb5a18b3bc0f9a8b21);
+            
+        
+
+        marker_fa96414f8c2c02edb131d2c16635d3de.bindPopup(popup_6a65960d51658af85ad7131de23719e5)
+        ;
+
+        
+    
+    
+            marker_fa96414f8c2c02edb131d2c16635d3de.bindTooltip(
+                `<div>
+                     Oakland Arena
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ec4b2b51073302d887f59dd2ce01fbe3 = L.marker(
+                [32.778882137105, -117.073346824539],
+                {}
+            ).addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            var icon_3616af98937d5cc5cdf66a5edd086918 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_ec4b2b51073302d887f59dd2ce01fbe3.setIcon(icon_3616af98937d5cc5cdf66a5edd086918);
+        
+    
+        var popup_a6ed5df85f9d958a44b5998a3c99f5aa = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_80e19d9ee9a234bf7d610ae4659b3860 = $(`<div id="html_80e19d9ee9a234bf7d610ae4659b3860" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Viejas Arena<br><b>Address:</b> 5500 Canyon Crest Dr, San Diego, Ca, 92182, Usa, 100</div>`)[0];
+                popup_a6ed5df85f9d958a44b5998a3c99f5aa.setContent(html_80e19d9ee9a234bf7d610ae4659b3860);
+            
+        
+
+        marker_ec4b2b51073302d887f59dd2ce01fbe3.bindPopup(popup_a6ed5df85f9d958a44b5998a3c99f5aa)
+        ;
+
+        
+    
+    
+            marker_ec4b2b51073302d887f59dd2ce01fbe3.bindTooltip(
+                `<div>
+                     Viejas Arena
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c13d8fbd1dc82f19c777e177d5fa5b48 = L.marker(
+                [33.807804008856, -117.876548039669],
+                {}
+            ).addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            var icon_2fa5f9467453c8c5a7e58c47d2d94482 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_c13d8fbd1dc82f19c777e177d5fa5b48.setIcon(icon_2fa5f9467453c8c5a7e58c47d2d94482);
+        
+    
+        var popup_5fa15072d2744e12272915b1b15c3924 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4d594dfefc18637368a2e9efa16b9f31 = $(`<div id="html_4d594dfefc18637368a2e9efa16b9f31" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Honda Center<br><b>Address:</b> 2695 E Katella Ave, Anaheim, Ca, 92806, Usa, 100</div>`)[0];
+                popup_5fa15072d2744e12272915b1b15c3924.setContent(html_4d594dfefc18637368a2e9efa16b9f31);
+            
+        
+
+        marker_c13d8fbd1dc82f19c777e177d5fa5b48.bindPopup(popup_5fa15072d2744e12272915b1b15c3924)
+        ;
+
+        
+    
+    
+            marker_c13d8fbd1dc82f19c777e177d5fa5b48.bindTooltip(
+                `<div>
+                     Honda Center
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f9b48f6973d33ab61c38c16e255a35b0 = L.marker(
+                [36.152694018629, -95.996353978289],
+                {}
+            ).addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            var icon_0a06ad8d4e1c6e44e7cadba4eab1d53a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_f9b48f6973d33ab61c38c16e255a35b0.setIcon(icon_0a06ad8d4e1c6e44e7cadba4eab1d53a);
+        
+    
+        var popup_352d948d4da97d4c74e3b07258f9daf2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ac658b5a486ccb08db59504eaead5de1 = $(`<div id="html_ac658b5a486ccb08db59504eaead5de1" style="width: 100.0%; height: 100.0%;"><b>Name:</b> BOK Center<br><b>Address:</b> 200 S Denver Ave, Tulsa, Ok, 74103, Usa, 100</div>`)[0];
+                popup_352d948d4da97d4c74e3b07258f9daf2.setContent(html_ac658b5a486ccb08db59504eaead5de1);
+            
+        
+
+        marker_f9b48f6973d33ab61c38c16e255a35b0.bindPopup(popup_352d948d4da97d4c74e3b07258f9daf2)
+        ;
+
+        
+    
+    
+            marker_f9b48f6973d33ab61c38c16e255a35b0.bindTooltip(
+                `<div>
+                     BOK Center
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a3e0fe08e20a946256e922c7bc2c37e4 = L.marker(
+                [30.276951980906, -97.732223997699],
+                {}
+            ).addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            var icon_551adde82ee1b11ccf37483e48d51ba7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_a3e0fe08e20a946256e922c7bc2c37e4.setIcon(icon_551adde82ee1b11ccf37483e48d51ba7);
+        
+    
+        var popup_42269b70ce0c2b6252497604e444492d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_47e91beffb9ca872cb521c3c14d9e960 = $(`<div id="html_47e91beffb9ca872cb521c3c14d9e960" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Frank Erwin Center<br><b>Address:</b> 1701 Red River St, Austin, Tx, 78712, Usa, 99.51</div>`)[0];
+                popup_42269b70ce0c2b6252497604e444492d.setContent(html_47e91beffb9ca872cb521c3c14d9e960);
+            
+        
+
+        marker_a3e0fe08e20a946256e922c7bc2c37e4.bindPopup(popup_42269b70ce0c2b6252497604e444492d)
+        ;
+
+        
+    
+    
+            marker_a3e0fe08e20a946256e922c7bc2c37e4.bindTooltip(
+                `<div>
+                     Frank Erwin Center
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_64d2b43c3c175b2bede7922d372159af = L.marker(
+                [29.949353004137, -90.080931165257],
+                {}
+            ).addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            var icon_cdd505f74e8524b6d4d5b83a60ba5d2c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_64d2b43c3c175b2bede7922d372159af.setIcon(icon_cdd505f74e8524b6d4d5b83a60ba5d2c);
+        
+    
+        var popup_3519da16a4e46599fb4bff4ae8fd711f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c49bddf667c1d504c2244d7412a57c16 = $(`<div id="html_c49bddf667c1d504c2244d7412a57c16" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Smoothie King Center<br><b>Address:</b> 1501 Dave Dixon Dr, New Orleans, La, 70113, Usa, 100</div>`)[0];
+                popup_3519da16a4e46599fb4bff4ae8fd711f.setContent(html_c49bddf667c1d504c2244d7412a57c16);
+            
+        
+
+        marker_64d2b43c3c175b2bede7922d372159af.bindPopup(popup_3519da16a4e46599fb4bff4ae8fd711f)
+        ;
+
+        
+    
+    
+            marker_64d2b43c3c175b2bede7922d372159af.bindTooltip(
+                `<div>
+                     Smoothie King Center
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a59fa7b2530194853d53575d781c0b4f = L.marker(
+                [26.155361019147, -80.330229010587],
+                {}
+            ).addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            var icon_ace39e217d4946dbfc92190a0000f919 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_a59fa7b2530194853d53575d781c0b4f.setIcon(icon_ace39e217d4946dbfc92190a0000f919);
+        
+    
+        var popup_903e0b1ae76a2ad0236ba2707bf57822 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ae2ed40db04477adeb603f00ab10b071 = $(`<div id="html_ae2ed40db04477adeb603f00ab10b071" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Amerant Bank Arena<br><b>Address:</b> 1 Panther Pkwy, Sunrise, Fl, 33323, Usa, 100</div>`)[0];
+                popup_903e0b1ae76a2ad0236ba2707bf57822.setContent(html_ae2ed40db04477adeb603f00ab10b071);
+            
+        
+
+        marker_a59fa7b2530194853d53575d781c0b4f.bindPopup(popup_903e0b1ae76a2ad0236ba2707bf57822)
+        ;
+
+        
+    
+    
+            marker_a59fa7b2530194853d53575d781c0b4f.bindTooltip(
+                `<div>
+                     Amerant Bank Arena
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e414ec855597cd72fbf6711e033af736 = L.marker(
+                [25.780858, -80.186651],
+                {}
+            ).addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            var icon_8d21fa7978674a9d56da407a5e303eaa = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_e414ec855597cd72fbf6711e033af736.setIcon(icon_8d21fa7978674a9d56da407a5e303eaa);
+        
+    
+        var popup_a13b8de7622db52baeeeebda2e7c0d82 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0290007879c9f6274850563a60431309 = $(`<div id="html_0290007879c9f6274850563a60431309" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Kaseya Center<br><b>Address:</b> 601, 601 Biscayne Blvd, Miami, Fl, 33132, Usa, 100</div>`)[0];
+                popup_a13b8de7622db52baeeeebda2e7c0d82.setContent(html_0290007879c9f6274850563a60431309);
+            
+        
+
+        marker_e414ec855597cd72fbf6711e033af736.bindPopup(popup_a13b8de7622db52baeeeebda2e7c0d82)
+        ;
+
+        
+    
+    
+            marker_e414ec855597cd72fbf6711e033af736.bindTooltip(
+                `<div>
+                     Kaseya Center
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_04c6a3049673e859819d0cb64588c10b = L.marker(
+                [28.539245989425, -81.383968014915],
+                {}
+            ).addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            var icon_bf83f62278e7e18f3f6b6cfa52104f6d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_04c6a3049673e859819d0cb64588c10b.setIcon(icon_bf83f62278e7e18f3f6b6cfa52104f6d);
+        
+    
+        var popup_34d8a8a15bbf5a4f3602fc1c0bb78602 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b15884ad142785d8265dcb98cbf828c3 = $(`<div id="html_b15884ad142785d8265dcb98cbf828c3" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Kia Center<br><b>Address:</b> 400 W Church St, Orlando, Fl, 32801, Usa, 100</div>`)[0];
+                popup_34d8a8a15bbf5a4f3602fc1c0bb78602.setContent(html_b15884ad142785d8265dcb98cbf828c3);
+            
+        
+
+        marker_04c6a3049673e859819d0cb64588c10b.bindPopup(popup_34d8a8a15bbf5a4f3602fc1c0bb78602)
+        ;
+
+        
+    
+    
+            marker_04c6a3049673e859819d0cb64588c10b.bindTooltip(
+                `<div>
+                     Kia Center
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e2c57c14c2471c04c421a2166c59da55 = L.marker(
+                [27.942735989551, -82.45184896628],
+                {}
+            ).addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            var icon_2ec75229b22f4a12b3cb271640fdfa1b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_e2c57c14c2471c04c421a2166c59da55.setIcon(icon_2ec75229b22f4a12b3cb271640fdfa1b);
+        
+    
+        var popup_bb0f13f918cd72ec48c9f44ba5ad7638 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9078729455b11d4fae45bb12a7b1d012 = $(`<div id="html_9078729455b11d4fae45bb12a7b1d012" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Amalie Arena<br><b>Address:</b> 401 Channelside Dr, Tampa, Fl, 33602, Usa, 100</div>`)[0];
+                popup_bb0f13f918cd72ec48c9f44ba5ad7638.setContent(html_9078729455b11d4fae45bb12a7b1d012);
+            
+        
+
+        marker_e2c57c14c2471c04c421a2166c59da55.bindPopup(popup_bb0f13f918cd72ec48c9f44ba5ad7638)
+        ;
+
+        
+    
+    
+            marker_e2c57c14c2471c04c421a2166c59da55.bindTooltip(
+                `<div>
+                     Amalie Arena
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5bb6969482a19710b2a1d308c1c5a571 = L.marker(
+                [33.991775006983, -84.094223968729],
+                {}
+            ).addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            var icon_a5719a731d05442ef53afeece7e57382 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_5bb6969482a19710b2a1d308c1c5a571.setIcon(icon_a5719a731d05442ef53afeece7e57382);
+        
+    
+        var popup_cec008ceb924116f2ccc3934728436d6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7a3c42b6e189a801c73dfd3b413c7f7a = $(`<div id="html_7a3c42b6e189a801c73dfd3b413c7f7a" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Gas South Arena<br><b>Address:</b> 6400 Sugarloaf Pkwy, Duluth, Ga, 30097, Usa, 100</div>`)[0];
+                popup_cec008ceb924116f2ccc3934728436d6.setContent(html_7a3c42b6e189a801c73dfd3b413c7f7a);
+            
+        
+
+        marker_5bb6969482a19710b2a1d308c1c5a571.bindPopup(popup_cec008ceb924116f2ccc3934728436d6)
+        ;
+
+        
+    
+    
+            marker_5bb6969482a19710b2a1d308c1c5a571.bindTooltip(
+                `<div>
+                     Gas South Arena
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_81599de93eedba74f0e2399706c1d71f = L.marker(
+                [36.15909301497, -86.77847598995],
+                {}
+            ).addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            var icon_7b82668d8d9121fdc89ea9c38932faeb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_81599de93eedba74f0e2399706c1d71f.setIcon(icon_7b82668d8d9121fdc89ea9c38932faeb);
+        
+    
+        var popup_96902968876f66a2262c59911c5307ac = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ad2aa36233faaad940a663ec36605e6b = $(`<div id="html_ad2aa36233faaad940a663ec36605e6b" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Bridgestone Arena<br><b>Address:</b> 501 Broadway, Nashville, Tn, 37203, Usa, 100</div>`)[0];
+                popup_96902968876f66a2262c59911c5307ac.setContent(html_ad2aa36233faaad940a663ec36605e6b);
+            
+        
+
+        marker_81599de93eedba74f0e2399706c1d71f.bindPopup(popup_96902968876f66a2262c59911c5307ac)
+        ;
+
+        
+    
+    
+            marker_81599de93eedba74f0e2399706c1d71f.bindTooltip(
+                `<div>
+                     Bridgestone Arena
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3cf1bbda76ef4605d8f00d7b4c76acc3 = L.marker(
+                [40.733297989114, -74.17157896523],
+                {}
+            ).addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            var icon_29b4e75d428aa5b091f7a088b10c4349 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_3cf1bbda76ef4605d8f00d7b4c76acc3.setIcon(icon_29b4e75d428aa5b091f7a088b10c4349);
+        
+    
+        var popup_d3c6d4faab190946eedc3014412ee877 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_67490c97e81e8288b24d258cc62bb87d = $(`<div id="html_67490c97e81e8288b24d258cc62bb87d" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Prudential Center<br><b>Address:</b> 25 Lafayette St, Newark, Nj, 07102, Usa, 100</div>`)[0];
+                popup_d3c6d4faab190946eedc3014412ee877.setContent(html_67490c97e81e8288b24d258cc62bb87d);
+            
+        
+
+        marker_3cf1bbda76ef4605d8f00d7b4c76acc3.bindPopup(popup_d3c6d4faab190946eedc3014412ee877)
+        ;
+
+        
+    
+    
+            marker_3cf1bbda76ef4605d8f00d7b4c76acc3.bindTooltip(
+                `<div>
+                     Prudential Center
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2e117950383cdbb77aee761f157d65b9 = L.marker(
+                [40.722880205476, -73.590566475685],
+                {}
+            ).addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            var icon_905446efb2ec356c183dfe9f5652711d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_2e117950383cdbb77aee761f157d65b9.setIcon(icon_905446efb2ec356c183dfe9f5652711d);
+        
+    
+        var popup_61e3d62742f07c3779d7f91be5b4187b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_36df83f97170cb32be2a4e2dd555fab2 = $(`<div id="html_36df83f97170cb32be2a4e2dd555fab2" style="width: 100.0%; height: 100.0%;"><b>Name:</b> Nassau Veterans Memorial Coliseum<br><b>Address:</b> 1255 Hempstead Tpke, Uniondale, Ny, 11553, Usa, 100</div>`)[0];
+                popup_61e3d62742f07c3779d7f91be5b4187b.setContent(html_36df83f97170cb32be2a4e2dd555fab2);
+            
+        
+
+        marker_2e117950383cdbb77aee761f157d65b9.bindPopup(popup_61e3d62742f07c3779d7f91be5b4187b)
+        ;
+
+        
+    
+    
+            marker_2e117950383cdbb77aee761f157d65b9.bindTooltip(
+                `<div>
+                     Nassau Veterans Memorial Coliseum
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var tile_layer_b88c2cc17921d4d5ac2537516473a0cf = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_b88c2cc17921d4d5ac2537516473a0cf.addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            var layer_control_774d8957be7ce7521f446027c1103374_layers = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_86c72d234e23f4ac7d44b9fb8ce061fe,
+                    "Carto Positron" : tile_layer_7cee32ae9318fdf0df5833178ff7b7dd,
+                    "OpenStreetMap" : tile_layer_b88c2cc17921d4d5ac2537516473a0cf,
+                },
+                overlays :  {
+                    "Venue Heat Map" : heat_map_a87356c2d4346c72b807da304fe7107c,
+                },
+            };
+            let layer_control_774d8957be7ce7521f446027c1103374 = L.control.layers(
+                layer_control_774d8957be7ce7521f446027c1103374_layers.base_layers,
+                layer_control_774d8957be7ce7521f446027c1103374_layers.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_165267ef13cda21932dd57dc111976fd);
+
+        
+    
+            tile_layer_86c72d234e23f4ac7d44b9fb8ce061fe.addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            tile_layer_7cee32ae9318fdf0df5833178ff7b7dd.addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            tile_layer_b88c2cc17921d4d5ac2537516473a0cf.addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            var heat_map_a87356c2d4346c72b807da304fe7107c = L.heatLayer(
+                [[42.350294474675, -71.06482068592], [39.940392998951, -75.129911040482], [37.778072994099, -122.417326989778], [36.114292999783, -115.195379972083], [32.75574599521, -117.213592975034], [34.044385992011, -118.266985974399], [30.030146003715, -90.050519029633], [33.772612001641, -84.38557003829], [25.787643993174, -80.189931038856], [25.818194982511, -80.122087998373], [28.607547017097, -81.197173027879], [38.639008988924, -90.232157972749], [41.976239011612, -87.864404017043], [40.759946021504, -73.980316075443], [40.427940981662, -86.914870006458], [42.366578752346, -71.061709323461], [39.354889988599, -74.438404028508], [40.7483136, -73.9940525], [41.581639000951, -81.563521959616], [39.764075013699, -86.15548801895], [38.626472008706, -90.202634981928], [35.463463992562, -97.515108984669], [32.790478003579, -96.810307016974], [29.750901264954, -95.362129982264], [39.748693005996, -105.007573964543], [33.446403417479, -112.071910440955], [39.097372986887, -94.580016021887], [34.043096017113, -118.266998966349], [36.103023991968, -115.169833020852], [37.33281498185, -121.900925981766], [47.236819009873, -122.42698000857], [44.944128559411, -93.101249566815], [43.043676979394, -87.917776036969], [40.43963298222, -79.989253021772], [38.898086281912, -77.020959508149], [38.046411996729, -78.506944039141], [39.902010001197, -75.171961959066], [41.767912004966, -72.67656603487], [35.225228637096, -80.839923993144], [35.803440774699, -78.721941531972], [41.880665995125, -87.674637980608], [42.962394018174, -85.671528999541], [42.875030195748, -78.876597452386], [40.007590004246, -83.025133005821], [38.257822998919, -85.753833002296], [29.425107022273, -98.434965496193], [41.263446994714, -95.928057979759], [40.768289333567, -111.90119546461], [37.751641981824, -122.205460051934], [32.778882137105, -117.073346824539], [33.807804008856, -117.876548039669], [36.152694018629, -95.996353978289], [30.276951980906, -97.732223997699], [29.949353004137, -90.080931165257], [26.155361019147, -80.330229010587], [25.780858, -80.186651], [28.539245989425, -81.383968014915], [27.942735989551, -82.45184896628], [33.991775006983, -84.094223968729], [36.15909301497, -86.77847598995], [40.733297989114, -74.17157896523], [40.722880205476, -73.590566475685]],
+                {"blur": 25, "maxZoom": 18, "minOpacity": 0.5, "radius": 75}
+            );
+        
+    
+            heat_map_a87356c2d4346c72b807da304fe7107c.addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            tile_layer_86c72d234e23f4ac7d44b9fb8ce061fe.addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            tile_layer_7cee32ae9318fdf0df5833178ff7b7dd.addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            tile_layer_b88c2cc17921d4d5ac2537516473a0cf.addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+    
+            heat_map_a87356c2d4346c72b807da304fe7107c.addTo(map_165267ef13cda21932dd57dc111976fd);
+        
+</script>
+</html>
